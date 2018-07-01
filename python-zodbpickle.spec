@@ -12,7 +12,7 @@ Summary:	Fork of Python 3 pickle module
 Summary(pl.UTF-8):	Alternatywna implementacja modułu pickle z Pythona3
 Name:		python-%{module}
 Version:	0.7.0
-Release:	1
+Release:	2
 License:	PSFL 2 and ZPL 2.1
 Group:		Libraries/Python
 # Source0:	https://pypi.python.org/packages/source/M/MODULE/%{module}-%{version}.tar.gz
