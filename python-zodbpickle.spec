@@ -1,3 +1,4 @@
+#
 # Conditional build:
 %bcond_with	doc	# don't build doc
 %bcond_without	tests	# do not perform "make test"
@@ -15,21 +16,20 @@ Version:	0.7.0
 Release:	3
 License:	PSFL 2 and ZPL 2.1
 Group:		Libraries/Python
-# Source0:	https://pypi.python.org/packages/source/M/MODULE/%{module}-%{version}.tar.gz
-Source0:	https://files.pythonhosted.org/packages/source/z/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+#Source0Download: https://pypi.org/simple/zodbpickle/
+Source0:	https://files.pythonhosted.org/packages/source/z/zodbpickle/%{pypi_name}-%{version}.tar.gz
 # Source0-md5:	5ad123465fb7283983b15e11d1df7ebd
-URL:		http://pypi.python.org/pypi/zodbpickle
+URL:		https://pypi.org/project/zodbpickle/
 BuildRequires:	rpm-pythonprov
-# for the py_build, py_install macros
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with python2}
 BuildRequires:	python-devel
-#BuildRequires:	python-setuptools
+BuildRequires:	python-setuptools
 BuildRequires:	python-test
 %endif
 %if %{with python3}
 BuildRequires:	python3-devel
-#BuildRequires:	python3-setuptools
+BuildRequires:	python3-setuptools
 BuildRequires:	python3-test
 %endif
 Requires:	python-modules
@@ -40,8 +40,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description -l pl.UTF-8
 
 %package -n python3-%{module}
-Summary:	-
-Summary(pl.UTF-8):	-
+Summary:	Fork of Python 3 pickle module
+Summary(pl.UTF-8):	Alternatywna implementacja modułu pickle z Pythona3
 Group:		Libraries/Python
 Requires:	python3-modules
 
